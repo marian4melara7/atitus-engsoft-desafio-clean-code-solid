@@ -1,56 +1,27 @@
 # 🧪 Laboratório: Clean Code, Big-O e SOLID
 
-Bem-vindo ao laboratório prático de Engenharia de Software. Aqui você aplicará os conceitos aprendidos em aula para transformar códigos frágeis em soluções profissionais.
+Bem-vindo ao laboratório prático de Engenharia de Software. Aqui você aplicará os conceitos aprendidos durante as aulas.
 
----
+## Estrutura dos Desafios
 
-## 🚀 Desafios Disponíveis
+1.  **[01-complexidade-ciclomatica](./01-complexidade-ciclomatica):** Refatore uma função com excesso de `ifs` usando Table-Driven Design.
+2.  **[02-big-o](./02-big-o):** Otimize uma busca de `O(n²)` para `O(n)`.
+3.  **[03-solid](./03-solid):** Quebre um script monolítico aplicando SRP e DIP.
 
-Cada pasta contém um cenário real de refatoração:
+## Instruções de entrega
 
-*   **[01 — Complexidade Ciclomática](./01-complexidade-ciclomatica)**
-    *   **Foco:** Reduzir o excesso de condicionais (`ifs`) utilizando *Table-Driven Design*.
-*   **[02 — Otimização Big-O](./02-big-o)**
-    *   **Foco:** Melhorar a performance de um algoritmo de `O(n²)` para `O(n)` usando estruturas de dados adequadas.
-*   **[03 — Princípios SOLID](./03-solid)**
-    *   **Foco:** Desacoplar um "Script Monolítico" aplicando *Single Responsibility* (SRP) e *Dependency Inversion* (DIP).
+Para realizar os desafios, siga os passos abaixo:
 
----
+1.  **Faça um Fork:** Clique no botão "Fork" no topo desta página para criar uma cópia deste repositório em sua conta pessoal.
+2.  **Clone o seu Fork:** Clone o repositório da **sua conta** para o seu computador.
+3.  **Desenvolva:** Realize as refatorações nos arquivos dentro de cada pasta de desafio.
+4.  **Commit e Push:** Salve suas alterações e envie para o seu repositório pessoal no GitHub.
+5.  **Envio:** O link de entrega deve ser o **URL do seu repositório pessoal** (o seu fork) com os desafios resolvidos.
 
-## 📋 Instruções de Entrega
+## Instruções de execução
 
-Siga rigorosamente o fluxo abaixo para garantir que sua atividade seja avaliada:
-
-### 1. Preparação do Ambiente
-1.  **Faça um Fork:** Clique no botão **Fork** (topo superior direito) para criar uma cópia deste repositório na sua conta GitHub.
-2.  **Clone Localmente:** Copie a URL do **seu fork** e execute no seu terminal:
-    ```bash
-    git clone https://github.com/SEU_USUARIO/atitus-engsoft-desafio-clean-code-solid.git
-    ```
-
-### 2. Desenvolvimento
-1.  Navegue até a pasta do desafio desejado.
-2.  Instale as dependências e rode os testes para entender o comportamento atual:
-    ```bash
-    cd 01-complexidade-ciclomatica # Exemplo
-    npm install
-    npm test
-    ```
-3.  Refatore o código até que ele esteja limpo, mantendo os testes passando.
-
-### 3. Envio e Submissão
-1.  Faça o **Commit** e **Push** das suas alterações para o seu repositório pessoal (o fork).
-2.  **Link de Entrega:** O URL que você deve enviar no portal é o do **seu repositório pessoal** no GitHub.
-
-> [!IMPORTANT]
-> A avaliação será baseada na qualidade da refatoração e na manutenção da integridade dos testes.
-
----
-
-## 🛠️ Comandos Úteis
-
-| Comando | Descrição |
-| :--- | :--- |
-| `npm install` | Instala as dependências (Jest, etc). |
-| `npm test` | Executa a bateria de testes automatizados. |
-| `npm test -- --watch` | Executa os testes em modo de observação (ideal para refatoração). |
+```bash
+cd 01-complexidade-ciclomatica # ou outro desafio
+npm install
+npm test
+```
