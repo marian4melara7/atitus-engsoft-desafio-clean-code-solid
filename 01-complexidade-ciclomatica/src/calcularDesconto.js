@@ -1,24 +1,35 @@
-function calcularDesconto(cliente, valor) {
-  if (cliente.tipo === 'premium') {
-    if (valor > 1000) {
-      if (cliente.anosCadastro > 5) {
-        return valor * 0.20;
-      } else {
-        return valor * 0.15;
-      }
-    } else if (valor > 500) {
-      return valor * 0.10;
-    } else {
-      return valor * 0.05;
-    }
-  } else if (cliente.tipo === 'gold') {
-    if (valor > 1000) {
-      return valor * 0.10;
-    } else {
-      return valor * 0.02;
-    }
+const REGRAS = [
+  {
+    cond: (c, v) => c.tipo === 'premium' && v > 1000 && c.years > 5,
+    desc: 0.20
+  },
+  {
+    cond: (c, v) => c.tipo === 'premium' && v > 1000,
+    desc: 0.15
+  },
+  {
+    cond: (c, v) => c.tipo === 'premium' && v > 500,
+    desc: 0.10
+  },
+  {
+    cond: (c) => c.tipo === 'premium',
+    desc: 0.05
+  },
+  {
+    cond: (c, v) => c.tipo === 'gold' && v > 1000,
+    desc: 0.10
+  },
+  {
+    cond: (c) => c.tipo === 'gold',
+    desc: 0.02
   }
-  return 0;
+];
+
+function calcularDesconto(cliente, valor) {
+  const regra = REGRAS.find(({ cond }) => cond(cliente, valor));
+  const taxa = regra?.desc ?? 0;
+
+  return valor * taxa;
 }
 
 module.exports = calcularDesconto;
